@@ -1,5 +1,5 @@
 {% set name = "qpmpc" %}
-{% set version = "3.0.1" %}
+{% set version = "3.1.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,12 +7,12 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/qpmpc-{{ version }}.tar.gz
-  sha256: 5394acc4969159c03af946a522b62d510617da090cb755805dc248b4e0ebe567
+  sha256: e9b9dfe040189d80e3b7ea102dfd5a62fcd3e775ced1fc8e105a9dd53ba00c69
 
 build:
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-  number: 1
+  number: 0
 
 requirements:
   host:
